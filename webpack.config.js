@@ -6,7 +6,7 @@ module.exports = {
   // entry: 웹팩에게 어플리케이션이 어디서 시작하고 어디서부터 파일들을 묶을건지 시작점을 정해준다.
   entry: "./src/index.tsx",
   // 현재 개발 모드에서 작업 중임을 알려줌.
-  mode: "development",
+  mode: "production",
   // export한 JS 모듈이 어떻게 변환되는지 정의한다. 방법은 rules에 정의한 대로 이루어진다.
   module: {
     rules: [
@@ -15,7 +15,6 @@ module.exports = {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] },
       },
       // 두번째 룰: CSS 처리에 대한 것. css-loader가 작동하기 위해서는 style-loader가 필요.
       {
@@ -37,7 +36,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist/"),
     // 번들이 생기는 경로를 지정. webpack-dev-server도 이를 참조
     publicPath: "/dist/",
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
   },
   // webpack-dev-server의 옵션을 설정
   devServer: {
