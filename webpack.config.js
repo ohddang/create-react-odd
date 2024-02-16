@@ -36,7 +36,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist/"),
     // 번들이 생기는 경로를 지정. webpack-dev-server도 이를 참조
     publicPath: "/dist/",
-    filename: "bundle.[contenthash].js",
+    filename: "bundle.js",
   },
   // webpack-dev-server의 옵션을 설정
   devServer: {

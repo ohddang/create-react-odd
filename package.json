@@ -35,7 +35,7 @@
     "starter"
   ],
   "description": "React boilerplate without CRA",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "webpack.config.js",
   "repository": {
     "type": "git",
